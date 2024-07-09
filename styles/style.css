@@ -1,0 +1,90 @@
+/* Default margin is 8 px */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+a:visited {
+    color: blue;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.navbar {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+
+.navbar * {
+    height: auto;
+    align-self: center;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: lightgrey;
+}
+
+section {
+    display: contents;
+}
+
+.hor-section {
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:  10px auto;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.hor-section-side {
+    width: 40%;
+    height: 100%;
+    padding: 10px;
+    /* border-right: 2px solid black; */
+    /* border-left: 2px solid black; */
+}
+
+.hor-section-side img {
+    width: 100%;
+}
+
+@media (width < 320px) {
+    .navbar {
+        flex-direction: column;
+        height: 200px;
+    }
+    .navbar * {
+        margin: 5px;
+    }
+}
+
+@media (width > 1000px) {
+    .hor-section {
+        width: 50%;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    background-color: lightgrey;
+    border-radius: 5px;
+}

@@ -2,11 +2,17 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 0;
+    height: max-content;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    width: auto;
+}
+
+.separator {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 10px;
+    width: 50%;
 }
 
 a:visited {
@@ -15,6 +21,10 @@ a:visited {
 
 .center-text {
     text-align: center;
+}
+
+.left-aligned {
+    margin-left: 8px;
 }
 
 .navbar {
@@ -27,17 +37,60 @@ a:visited {
     padding-bottom: 5px;
 }
 
-.navbar * {
-    height: auto;
-    align-self: center;
+#video-options {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#video-options a {
+    background-color: rgb(103, 255, 245);
+    /* padding: 10px;
+    border-radius: 10px; */
+}
+
+a {
+    text-decoration-line: none;
     padding: 5px;
-    margin: 5px;
     border-radius: 5px;
-    background-color: lightgrey;
+    font-size: 1.1rem;
+}
+
+a:hover, #video-options a:hover {
+    background-color: rgb(168, 153, 255);
+}
+
+.navbar * {
+    text-align: center;
+    align-self: center;
+    width: 90px;
+    margin: 5px;
+    background-color: rgb(146, 255, 134);
+}
+
+
+.navbar a:active {
+    background-color: rgb(116, 190, 255);
+
 }
 
 section {
     display: contents;
+}
+
+#extra-facts {
+    text-align: center;
+}
+
+#extra-facts ul {
+    width: 50%;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 30px;
+}
+
+#extra-facts ul:active {
+    background-color: rgb(153, 207, 255);
 }
 
 .hor-section {
@@ -54,21 +107,38 @@ section {
     width: 40%;
     height: 100%;
     padding: 10px;
-    /* border-right: 2px solid black; */
-    /* border-left: 2px solid black; */
 }
 
 .hor-section-side img {
     width: 100%;
 }
 
-@media (width < 320px) {
-    .navbar {
+@media (max-width: 750px) {
+    #video-options {
         flex-direction: column;
-        height: 200px;
+        margin: 5px 0;
+    }
+}
+
+@media (width < 400px) {
+    .navbar {
+        height: 140px;
     }
     .navbar * {
         margin: 5px;
+        height: 70px;
+    }
+
+    .navbar, .hor-section {
+        flex-direction: column;
+    }
+
+    .hor-section-side {
+        width: 90%;
+    }
+
+    #extra-facts {
+        text-align: left;
     }
 }
 
@@ -76,10 +146,15 @@ section {
     .hor-section {
         width: 50%;
     }
+
+    main {
+        text-align: center;
+    }
 }
 
 footer {
-    position: absolute;
+    margin-top: 20px;
+    position: relative;
     bottom: 0;
     left: 0;
     height: 50px;
